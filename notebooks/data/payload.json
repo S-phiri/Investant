@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-03-18",
+  "window_trading_days": 20,
+  "universe_note": "Sample US + JSE names from cached OHLCV; educational only, not advice.",
+  "stocks": {
+    "Anglo American": {
+      "mean_daily_return_pct_window": -0.6358,
+      "volatility_daily_pct_window": 2.8265,
+      "kmeans_cluster_id": 0,
+      "cluster_label": "weaker_trend_high_volatility"
+    },
+    "Apple": {
+      "mean_daily_return_pct_window": -0.2709,
+      "volatility_daily_pct_window": 1.3704,
+      "kmeans_cluster_id": 2,
+      "cluster_label": "weaker_trend_moderate_volatility"
+    },
+    "FirstRand": {
+      "mean_daily_return_pct_window": -0.4822,
+      "volatility_daily_pct_window": 2.2655,
+      "kmeans_cluster_id": 0,
+      "cluster_label": "weaker_trend_high_volatility"
+    },
+    "IBM": {
+      "mean_daily_return_pct_window": -0.1162,
+      "volatility_daily_pct_window": 3.5271,
+      "kmeans_cluster_id": 1,
+      "cluster_label": "weaker_trend_high_volatility"
+    },
+    "Microsoft": {
+      "mean_daily_return_pct_window": -0.0885,
+      "volatility_daily_pct_window": 1.4614,
+      "kmeans_cluster_id": 2,
+      "cluster_label": "weaker_trend_moderate_volatility"
+    },
+    "MTN Group": {
+      "mean_daily_return_pct_window": -0.0101,
+      "volatility_daily_pct_window": 2.6034,
+      "kmeans_cluster_id": 1,
+      "cluster_label": "weaker_trend_high_volatility"
+    },
+    "Naspers": {
+      "mean_daily_return_pct_window": 0.0144,
+      "volatility_daily_pct_window": 2.8215,
+      "kmeans_cluster_id": 1,
+      "cluster_label": "weaker_trend_high_volatility"
+    },
+    "Shoprite": {
+      "mean_daily_return_pct_window": -0.1487,
+      "volatility_daily_pct_window": 1.8429,
+      "kmeans_cluster_id": 2,
+      "cluster_label": "weaker_trend_moderate_volatility"
+    }
+  },
+  "classifier_note": "MVP: no supervised price forecaster; regime-style groups from k-means on recent return mean/vol features only. Not predictive and not investment advice."
+}
