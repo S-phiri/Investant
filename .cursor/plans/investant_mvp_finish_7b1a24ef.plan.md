@@ -17,6 +17,9 @@ todos:
   - id: post-ship-luse-fx
     content: After MVP — LuSE CSVs, ZMW/ZAR/USD + macro context in docs/payload; extend universe_note in data_processor if needed
     status: pending
+  - id: luse-scrape-universe
+    content: Optional — scrape LuSE listed-companies page for ticker + name universe (requests/BS4; respect ToS/robots); OHLCV still from separate source
+    status: pending
   - id: risk-profile-llm
     content: After 03 works — pass user risk profile (conservative/balanced/aggressive) into LLM prompt mapping to cluster_label strings; disclaimers
     status: pending
@@ -40,6 +43,7 @@ isProject: false
 ## Post-MVP enrichment (does not block shipping)
 
 - **LuSE (Zambia):** manually downloaded CSVs into `data/raw`, same schema as today.
+- **LuSE universe via web (optional):** The official [Listed Companies](https://www.luse.co.zm/listed-companies/) page exposes symbols and names in HTML, so we *can* build a **ticker list** with `requests` + **BeautifulSoup** (or **Playwright** if the live site is JS-rendered). **Check LuSE terms of use and `robots.txt`** before automating; treat scraping as **best-effort** and expect **selector maintenance** when the site changes. This yields **symbols only**—**OHLCV** still needs another provider or manual files per symbol.
 - **Context layer:** ZMW/ZAR/USD and macro notes in README / `universe_note` / LLM prompt for **African retail investor** story.
 - **CV / README one-liner** (use once narrative matches data—LuSE line is aspirational until files exist):
 
