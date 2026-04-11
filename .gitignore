@@ -36,3 +36,7 @@ target/
 dbt_packages/
 logs/
 # end dbt Cloud content
+<<<<<<< HEAD
+=======
+dbt_internal_packages/
+>>>>>>> 184866c10b9d5d65ba9337fee5b40da2bc0f228c
